@@ -1,0 +1,25 @@
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 3.2rem; /* 24px em cima/baixo, 32px dos lados */
+  background-color: var(--cor-fundo-secundario);
+  border-top: 1px solid var(--cor-borda);
+  font-size: 1.4rem; /* 14px */
+  color: var(--cor-texto-secundario);
+}
+
+.social-links {
+  display: flex;
+  gap: 1.6rem; /* 16px de espaço entre os links */
+}
+
+.social-links a {
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--cor-primaria);
+}

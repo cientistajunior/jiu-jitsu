@@ -1,0 +1,10 @@
+/* :host se refere ao próprio elemento <aap-root> do nosso componente */
+:host {
+  display: flex;
+  flex-direction: column; /* Organiza os filhos (header, main, footer) em uma coluna */
+  min-height: 100vh; /* Garante que o app ocupe no mínimo 100% da altura da tela */
+}
+
+main {
+  flex-grow: 1; /* Este é o truque! Faz a seção <main> crecer e ocupar todo o espaço disponível, empurrando o footer para o final da página. */
+}

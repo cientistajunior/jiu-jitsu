@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ====================================================== */
+/* 1. CSS RESET                                           */
+/* ====================================================== */
+/* Zera as configurações padrão dos navegadores */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* A melhor prática para cálculo de caixas */
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Deixa as fontes mais suaves */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block; /* Remove espaços em branco abaixo de imagens */
+  max-width: 100%; /* Imagens não extrapolam o tamanho do container */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Herda as fontes do elemento pai */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; /* Quebra palavras longas */
+}
+
+/* ====================================================== */
+/* 2. VARIÁVEIS GLOBAIS (:root)                           */
+/* ====================================================== */
+/* Definimos nossas cores e fontes em um só lugar */
+
+:root {
+  --cor-primaria: #007bff; /* Um azul vibrante para links e botões */
+  --cor-fundo-escuro: #121212;
+  --cor-fundo-secundario: #1e1e1e;
+  --cor-texto-principal: #e0e0e0;
+  --cor-texto-secundario: #a0a0a0;
+  --cor-borda: #333333;
+
+  --font-principal: sans-serif;
+}
+
+/* ====================================================== */
+/* 3. PADRÕES GLOBAIS (html, body)                        */
+/* ====================================================== */
+/* Configuração do REM e estilos base do corpo */
+
+html {
+  /* Isso facilita a matemática com a unidade REM.
+    O padrão do navegador é 16px. 62.5% de 16px = 10px.
+    Agora, 1rem = 10px, 1.6rem = 16px, 2.4rem = 24px, etc.
+    Fica muito mais fácil de usar!
+  */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--cor-fundo-escuro); /* Usando nossa variável cor */
+  color: var(--cor-texto-principal); /* Usando nossa variável de cor */
+  font-family: var(--font-principal);
+  font-size: 1.6rem; /* Equivale a 16px, um bom tamanho padrão para leitura */
+}

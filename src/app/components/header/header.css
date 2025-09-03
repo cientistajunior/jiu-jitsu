@@ -1,0 +1,32 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Usando nossas variáveis de cor e espaçamentos em REM */
+  padding: 1.6 rem 3.2rem;
+  background-color: var(--cor-fundo-secundario); /* Cor do fundo do :root */
+  border-bottom: 1px solid var(--cor-borda); /* Borda sutil usando variável */
+}
+
+.log a {
+  color: var(--texto-principal); /* Cor do texto do :root */
+  text-decoration: none;
+  font-size: 2.4rem; /* 24px */
+  font-weight: bold;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2.4rem; /* 24px de espaço entre os links */
+}
+
+.main-nav a {
+  color: var(--cor-texto-secundario); /* Corr mais suave para links não ativos */
+  text-decoration: none;
+  font-size: 1.6rem; /* 16px */
+  transition: color 0.3s ease;
+}
+.main-nav a:hover {
+  color: var(--cor-primaria); /* Cor de destaque do :root */
+}
