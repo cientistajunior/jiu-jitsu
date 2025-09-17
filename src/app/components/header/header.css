@@ -8,7 +8,7 @@
   border-bottom: 1px solid var(--cor-borda); /* Borda sutil usando variável */
 }
 
-.log a {
+.main-header .logo a {
   color: var(--texto-principal); /* Cor do texto do :root */
   text-decoration: none;
   font-size: 2.4rem; /* 24px */

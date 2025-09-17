@@ -1,0 +1,68 @@
+.championships {
+  padding: 4rem 2rem; /* Espaçamento interno da seção */
+  max-width: 1200px; /* Largura máxima para o conteúdo */
+  margin: 0 auto; /* Centraliza a seção na página */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.cards-container {
+  display: grid; /* Usaremos CSS Grid para um layout responsivo */
+  /* Cria colunas que se ajustam: cada coluna terá no mínimo 300px
+    e elas se distribuirão igualmente no espaço (1fr) */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.4rem; /* Espaçamento entre os cards */
+}
+
+.championship-card {
+  background-color: var(--cor-fundo-secundario);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.championship-card h3 {
+  font-size: 2rem;
+  color: var(--cor-texto-principal);
+  margin-bottom: 0.8rem;
+}
+
+.championship-card .card-button {
+  margin-top: auto; /* Truque de flexbox para empurrar o botão para o final do card */
+  align-self: flex-start; /* Alinha o botão à esquerda */
+  padding: 0.8rem 1.6rem;
+  background-color: var(--cor-primaria);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.championship-card .card-button:hover {
+  background-color: #0056b3;
+}
+
+.news {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-container {
+  display: grid;
+  gap: 2.4rem;
+  /* Define um layout com 3 colunas e 2 linhas de altura automática */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  /* Define as "áreas" do nosso grid. O primeiro artigo ocupará a área 'featured' */
+  grid-template-areas:
+    'featured featured article-2'
+    'featured featured article-3';
+}

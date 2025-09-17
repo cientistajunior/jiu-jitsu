@@ -1,0 +1,55 @@
+.news-article {
+  background-color: var(--cor-fundo-secundario);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* O truque principal: estiliza o PRIMEIRO artigo de forma diferente */
+.news-article:nth-child(1) {
+  grid-area: featured; /* Diz a este artigo para ocupar a área 'featured' do grid */
+}
+
+/* Estiliza o SEGUNDO artigo de forma diferente */
+.news-article:nth-child(2) {
+  grid-area: article-2;
+}
+
+/* Estiliza o TERCEIRO artigo de forma diferente */
+.news-article:nth-child(3) {
+  grid-area: article-3;
+}
+
+.news-category {
+  color: var(--cor-primaria);
+  font-size: 1.2rem; /* 12px */
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.news-article h3 {
+  font-size: 2.2rem; /* 22px */
+  margin-bottom: 1.2rem;
+}
+
+.news-summary {
+  color: var(--cor-texto-secundario);
+  font-size: 1.5rem; /* 15px */
+  line-height: 1.6;
+}
+
+.read-more {
+  margin-top: auto; /* Empurra o botão para o final do card */
+  align-self: flex-start;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
