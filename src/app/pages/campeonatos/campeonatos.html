@@ -1,0 +1,33 @@
+<div class="campeonatos-container">
+  <h1>Próximos Campeonatos</h1>
+  <p class="subtitulo">
+    Fique por dentro dos principais eventos do circuito nacional e internacional.
+  </p>
+
+  <div class="campeonatos-grid">
+    <div *ngFor="let campeonato of campeonatos" class="campeonato-card">
+      <img [src]="campeonato.imagemUrl" [alt]="'Banner do ' + campeonato.nome" />
+      <div class="card-content">
+        <h3>{{ campeonato.nome }}</h3>
+
+        <div class="info-item">
+          <span class="material-icons">event</span>
+          <p>{{ campeonato.data }}</p>
+        </div>
+
+        <div class="info-item">
+          <span class="material-icons">Location_on</span>
+          <p>{{ campeonato.local }}</p>
+        </div>
+
+        <div class="info-item tipo-evento">
+          <span class="tag">{{ campeonato.tipo }}</span>
+        </div>
+
+        <button class="btn-inscricao" [class.encerradas]="!campeonato.inscricaoAberta">
+          {{ campeonato.inscricaoAberta ? 'Fazer Inscrição' : 'Inscrição Encerradas' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

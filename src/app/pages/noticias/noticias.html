@@ -1,0 +1,26 @@
+<div class="noticias-container">
+  <h1>Últimas Notícias</h1>
+  <p class="subtitulo">Acompnhe o que há de mais recente no mundo do Jiu-Jitsu com competitivo.</p>
+
+  <div class="noticias-list">
+    <div *ngFor="let noticia of noticias" class="noticia-card">
+      <div class="imagem-container">
+        <img [src]="noticia.imagemUrl" [alt]="'Imagem para a noticia: ' + noticia.titulo" />
+      </div>
+
+      <div class="conteudo-container">
+        <h3>{{ noticia.titulo }}</h3>
+
+        <div class="meta-info">
+          <span>{{ noticia.fonte }}</span>
+          <span>&bull;</span>
+          <span>{{ noticia.dataPublicacao }}</span>
+        </div>
+
+        <p class="resumo">{{ noticia.resumo }}</p>
+
+        <a [href]="noticia.link" class="btn-leia-mais">Leia Mais</a>
+      </div>
+    </div>
+  </div>
+</div>

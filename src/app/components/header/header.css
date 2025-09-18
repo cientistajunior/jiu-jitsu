@@ -30,3 +30,8 @@
 .main-nav a:hover {
   color: var(--cor-primaria); /* Cor de destaque do :root */
 }
+
+.main-nav a.active-link {
+  color: var(--cor-primaria); /* Cor de destaque do :root */
+  font-weight: bold;
+}

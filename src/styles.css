@@ -80,3 +80,6 @@ body {
   font-family: var(--font-principal);
   font-size: 1.6rem; /* Equivale a 16px, um bom tamanho padrão para leitura */
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
