@@ -1,30 +1,23 @@
-<section class="hero">
-  <div class="hero-content">
-    <h1>Sua Jornada no Tatame Começa Aqui</h1>
-    <p>Acompanhe os principais campeonatos, notícias e atletas do mundo do Jiu-Jitsu.</p>
-    <a href="#" class="cta-button">Ver Campeonatos</a>
+<div class="home-container">
+  <div class="hero-section">
+    <div class="hero-text">
+      <h1>Sua Jornada no Tatame Começa Aqui.</h1>
+      <p>Acompanhe os principais campeonatos, notícias e atletas do mundo do Jiu-Jitsu.</p>
+      <a href="/campeonatos" class="cta-button">ver Campeonatos</a>
+    </div>
   </div>
-</section>
 
-<section class="championships">
-  <h2 class="section-title">Próximos Campeonatos</h2>
-  <div class="cards-container">
-    <ng-container *ngFor="let campeonato of campeonatos">
-      <div class="championship-card">
-        <h3>{{ campeonato.nome }}</h3>
-        <p class="card-info">{{ campeonato.data }}</p>
-        <p class="card-info">{{ campeonato.local }}</p>
-        <a href="#" class="card-button">Saiba Mais</a>
-      </div>
-    </ng-container>
+  <div class="events-section">
+    <h2>Próximos Eventos</h2>
+    <div class="events-grid">
+      <app-card
+        *ngFor="let evento of eventos"
+        [imageUrl]="evento.imageUrl"
+        [title]="evento.title"
+        [subtitle]="evento.subtitle"
+        [description]="evento.description"
+        [buttonText]="evento.buttonText"
+      ></app-card>
+    </div>
   </div>
-</section>
-
-<section class="news">
-  <h2 class="section-title">Últimas Notícias</h2>
-  <div class="news-container">
-    <ng-container *ngFor="let noticia of noticias">
-      <app-news-article [noticia]="noticia"></app-news-article>
-    </ng-container>
-  </div>
-</section>
+</div>

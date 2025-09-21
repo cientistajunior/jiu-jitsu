@@ -1,0 +1,13 @@
+<div class="card-container">
+  <img *ngIf="imageUrl" [src]="imageUrl" [alt]="'Imagem para ' + title" class="card-image" />
+
+  <div class="card-body">
+    <h3 class="card-title">{{ title }}</h3>
+
+    <p *ngIf="subtitle" class="card-subtitle">{{ subtitle }}</p>
+
+    <p *ngIf="description" class="card-description"></p>
+
+    <a [href]="buttonLink" class="card-button">{{ buttonText }}</a>
+  </div>
+</div>

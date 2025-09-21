@@ -1,40 +1,45 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+// 1. Importamos o CardComponent
+import { CardComponent } from '../../components/card/card';
 
 @Component({
   selector: 'app-noticias',
-  imports: [CommonModule],
+  standalone: true,
+  // 2. Adicionamos o CardComponent aos imports
+  imports: [CommonModule, CardComponent],
   templateUrl: './noticias.html',
-  styleUrl: './noticias.css',
+  styleUrls: ['./noticias.css'],
 })
 export class NoticiasComponent {
+  // 3. Ajustamos os dados para as propriedades do CardComponent
   noticias = [
     {
-      titulo: 'Gordon Ryan confirma participação no ADCC 2024',
-      fonte: 'FloGrappling',
-      dataPublicacao: '15 de Setembro, 2025',
-      resumo:
+      title: 'Gordon Ryan confirma participação no ADCC 2024',
+      subtitle: 'Fonte: FloGrappling',
+      description:
         'O maior nome do grappling mundial, Gordon Ryan, confirmou que buscará seu sexto título no ADCC, competindo na divisão super-pesado e no absoluto.',
-      imagemUrl: 'assets/images/gordon-ryan.jpg', // Usaremos uma imagem local
-      link: '#',
+      imageUrl: 'assets/images/gordon-ryan.jpg',
+      buttonText: 'Leia Mais',
+      buttonLink: '#',
     },
     {
-      titulo: 'Mica Galvão finaliza 5 oponentes e vence o GP da IBJJF',
-      fonte: 'BJJ Heroes',
-      dataPublicacao: '12 de Setembro, 2025',
-      resumo:
+      title: 'Mica Galvão finaliza 5 oponentes e vence o GP da IBJJF',
+      subtitle: 'Fonte: BJJ Heroes',
+      description:
         'O jovem fenômeno Mica Galvão teve uma performance espetacular no Grand Prix peso-médio da IBJJF, finalizando todos os seus adversários para levar o ouro.',
-      imagemUrl: 'assets/images/mica-galvao.jpg', // Usaremos uma imagem local
-      link: '#',
+      imageUrl: 'assets/images/mica-galvao.jpg',
+      buttonText: 'Leia Mais',
+      buttonLink: '#',
     },
     {
-      titulo: 'IBJJF anuncia novas regras para 2026 com foco em dinamismo',
-      fonte: 'Tatame Magazine',
-      dataPublicacao: '10 de Setembro, 2025',
-      resumo:
+      title: 'IBJJF anuncia novas regras para 2026 com foco em dinamismo',
+      subtitle: 'Fonte: Tatame Magazine',
+      description:
         'A Federação Internacional de Jiu-Jitsu Brasileiro anunciou um novo conjunto de regras que entrará em vigor em 2026, com o objetivo de diminuir as amarrações e aumentar a ação nas lutas.',
-      imagemUrl: 'assets/images/ibjjf-regras.jpg', // Usaremos uma imagem local
-      link: '#',
+      imageUrl: 'assets/images/ibjjf-regras.jpg',
+      buttonText: 'Leia Mais',
+      buttonLink: '#',
     },
   ];
 }

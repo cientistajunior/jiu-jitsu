@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewsArticleComponent } from '../../components/news-article/news-article';
+import { CardComponent } from '../../components/card/card';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, NewsArticleComponent],
+  imports: [CommonModule, CardComponent],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -39,6 +39,31 @@ export class HomeComponent {
       titulo: 'IBJJF anuncia novas regras para 2026',
       resumo:
         'Confederação divulga mudanças que visam deixar as lutas mais dinâmicas e com menos amarrações...',
+    },
+  ];
+
+  // Ajustamos os dados para corresponderem aos @Ipunt()s do CardComponent
+  eventos = [
+    {
+      imageUrl: 'assets/images/mundial.jpg',
+      title: 'Mundial de Jiu-Jitsu 2025',
+      subtitle: '15 de Junho, 2025',
+      description: 'Long Beach, California',
+      buttonText: 'saiba Mais',
+    },
+    {
+      imageUrl: 'assets/images/adcc.jpg',
+      title: 'Pan American Championship',
+      subtitle: '15 de Abril, 2025',
+      description: 'Kissimmee, Florida',
+      buttonText: 'saiba Mais',
+    },
+    {
+      imageUrl: 'assets/images/brasileiro.jpg',
+      title: 'Brasileiro de Jiu Jitsu',
+      subtitle: '01 de Maio, 2025',
+      description: 'Barueri, São Paulo',
+      buttonText: 'saiba Mais',
     },
   ];
 }
